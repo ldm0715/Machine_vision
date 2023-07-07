@@ -147,7 +147,7 @@ if __name__ == '__main__':
 
     # TODO 4:二值化处理
     ret1, binary1 = cv2.threshold(canny_img, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
-    cv2.imwrite("./output/binary1.png", binary1)
+    cv2.imwrite("./output/binary.png", binary1)
     ret2, binary2 = cv2.threshold(canny_noise_3, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
     ret3, binary3 = cv2.threshold(canny_noise_7, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
     # print(len(binary), len(binary[0]))

@@ -63,7 +63,6 @@ def bilinear_interpolation(xp, yp, image):
                   f_x1y2 * (x2 - xp) * (yp - y1) + f_x2y2 * (xp - x1) * (yp - y1)
     return pixel_value
 
-
 # 判断是否为整数
 def init_integer(num):
     if num.is_integer():
@@ -144,6 +143,7 @@ def show_result(image_list, title_list):
             plt.axis("off")
             plt.imshow(image_list[int(i / 2)])
     plt.tight_layout()
+    plt.savefig("./output/circular_LBP.png")
     plt.show()
 
 

@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 读取图像
-img = cv2.imread("./input/gcnanmu.png")
+img = cv2.imread("./input/test.png")
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 print(f"Original: width-{img.shape[0]} height-{img.shape[1]}")
 
@@ -71,4 +71,5 @@ plt.figure(dpi=150)
 plt.title(f"Gaussian pyramid\n(floors:{floors})")
 plt.axis("off")
 plt.imshow(result)
+plt.savefig("./output/stitching_effect.png")
 plt.show()

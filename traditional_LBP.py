@@ -14,6 +14,7 @@ def init_image(input_path):
     """
     # 以单通道的形式读取图像
     image = cv2.imread(input_path, 0)
+    # image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # 给图像填充边缘像素
     image = cv2.copyMakeBorder(image, 1, 1, 1, 1, borderType=cv2.BORDER_REPLICATE)
     h, w = image.shape[0], image.shape[1]
@@ -72,6 +73,7 @@ def LBP(image):
     # 将像素值归一化
     temp = np.clip(temp, 0, 255).astype("uint8")
     # 转化通道，方便后续展示
+    cv2.imwrite("./output/LBP.png",temp)
     temp = cv2.cvtColor(temp, cv2.COLOR_BGR2RGB)
     print("---图像处理完成---")
     return temp
@@ -102,6 +104,7 @@ def show_result(image_list, title_list):
             plt.imshow(image_list[int(i / 2)])
     # 紧凑排布
     plt.tight_layout()
+    plt.savefig("./output/traditional_LBP.png")
     plt.show()
 
 

@@ -120,6 +120,7 @@ def pyramid(imag, floors, guass_kernel):
             plt.imshow(imag)
         # 设置子图间的水平和垂直间距
         plt.subplots_adjust(wspace=0.5, hspace=0.35)
+    plt.savefig("./output/Gaussian_pyramid.png")
     plt.show()
     print("Image created successfully")
 

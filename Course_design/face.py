@@ -19,6 +19,7 @@ for (x, y, w, h) in faces:
     # 在原彩色图上画人脸矩形框
     cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
 # 显示画好矩形框的图片
+cv2.imwrite('../output/faces.jpg', img)
 cv2.namedWindow('faces', cv2.WINDOW_AUTOSIZE)
 cv2.imshow('faces', img)
 # 等待退出键
